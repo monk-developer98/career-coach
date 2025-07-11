@@ -2,6 +2,7 @@ import HeroSection from "@/components/Hero";
 // import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { features } from "@/data/features";
+import { howItWorks } from "@/data/howItWorks";
 
 export default function Home() {
   return (
@@ -39,9 +40,48 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <h3 className="text-4xl font-bold">50+</h3>
+              <p className="text-muted-foreground">Industries Coverd</p>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <h3 className="text-4xl font-bold">1000+</h3>
+              <p className="text-muted-foreground">Interview Questions</p>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <h3 className="text-4xl font-bold">95%</h3>
+              <p className="text-muted-foreground">Success Rate</p>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <h3 className="text-4xl font-bold">24/7</h3>
+              <p className="text-muted-foreground">AI Support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-3xl font-bold tracking-tighter text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter text-center mb-4">
+              How It Works
+            </h2>
+            <p className="text-muted-foreground">
+              Four simple step tp accelerate your career growth
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {howItWorks?.map((item, idx) => {
+              return (
+                <div key={idx}>
+                  <div className="w-16 h-16 rounded-bl-full bg-primary/10  flex items-center justify-center">{item?.icon}</div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </div>
