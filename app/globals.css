@@ -145,6 +145,10 @@
   background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.9) );
 }
 
+.gradient {
+  background: linear-gradient(to bottom, #9ca3af, #e5e7eb, #4b5563);;
+}
+
 .hero-image-wrapper {
   perspective: 1000px;  
 }
